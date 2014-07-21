@@ -58,15 +58,26 @@
       
       
   
-    <h1 class="title"><a href="/2014/07/20/scala/">scala</a></h1>
+    <h1 class="title"><a href="/2014/07/20/scala/">Scala vs Java</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <h3 id="Scala_vs_Java">Scala vs Java</h3>
-<p>Scala is programming paradigm mixed with features of functional programming and object oriented programming.</p>
-
+        <p>Scala is programming paradigm mixed with features of functional programming and object oriented programming.</p>
+<p>Java is most popular programming languages, especially in a enterprise enviroment. </p>
+<pre><code><span class="comment">// Java</span>
+class PrintOptions {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(String[] args) {
+    System.<span class="keyword">out</span>.println(<span class="string">"Options selected:"</span>);
+        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; args.length; i++){
+            <span class="keyword">if</span> (args[i].startsWith(<span class="string">"-"</span>)){
+                System.<span class="keyword">out</span>.println(<span class="string">" "</span>+args[i].substring(<span class="number">1</span>))
+            }
+            }
+        }
+}
+</code></pre>
       
     </div>
     <footer>
