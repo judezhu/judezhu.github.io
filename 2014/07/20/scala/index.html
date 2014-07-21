@@ -61,26 +61,28 @@
       
         <ul>
 <li>Scala is programming paradigm mixed with features of functional programming and object oriented programming.</li>
-<li><p>Java is most popular programming languages, especially in a enterprise enviroment. </p>
-<p>  // Java<br>  class PrintOptions {</p>
-<pre><code>  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(String[] args) {
-  System.<span class="keyword">out</span>.println(<span class="string">"Options selected:"</span>);
-      <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; args.length; i++)
-          <span class="keyword">if</span> (args[i].startsWith(<span class="string">"-"</span>))
-              System.<span class="keyword">out</span>.println(<span class="string">" "</span>+args[i].substring(<span class="number">1</span>));
-      }
-</code></pre><p>  }</p>
-<p>  // Scala<br>  object PrintOptions {</p>
-<pre><code>  <span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">(args: Array[String])</span>:</span> unit = {
-      System.out.println(<span class="string">"Options selected:"</span>)
-  <span class="keyword">for</span> (val arg &lt;- args)
-      <span class="keyword">if</span> (arg.startsWith(<span class="string">"-"</span>))
-              System.out.println(<span class="string">" "</span>+arg.substring(<span class="number">1</span>))
-  }
-</code></pre><p>  }</p>
-</li>
+<li>Java is most popular programming languages, especially in a enterprise enviroment. </li>
 </ul>
+<pre><code><span class="comment">// Java</span>
+class PrintOptions {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(String[] args) {
+    System.<span class="keyword">out</span>.println(<span class="string">"Options selected:"</span>);
+        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; args.length; i++)
+            <span class="keyword">if</span> (args[i].startsWith(<span class="string">"-"</span>))
+                System.<span class="keyword">out</span>.println(<span class="string">" "</span>+args[i].substring(<span class="number">1</span>));
+        }
+}
 
+<span class="comment">// Scala</span>
+<span class="keyword">object</span> PrintOptions {
+    def main(args: Array[String]): unit = {
+        System.<span class="keyword">out</span>.println(<span class="string">"Options selected:"</span>)
+    <span class="keyword">for</span> (val arg &lt;- args)
+        <span class="keyword">if</span> (arg.startsWith(<span class="string">"-"</span>))
+                System.<span class="keyword">out</span>.println(<span class="string">" "</span>+arg.substring(<span class="number">1</span>))
+    }
+}
+</code></pre>
       
     </div>
     <footer>
