@@ -74,34 +74,32 @@
 </code></pre></li>
 </ul>
 <h2 id="VNC_to_your_pi">VNC to your pi</h2>
-<p>For users, who wants to remotely see the desktop of Raspberry pi, it’s necessary to set up the VNC.</p>
-<pre><code>* First we need <span class="keyword">to</span> install <span class="keyword">the</span> VNC server <span class="function_start"><span class="keyword">on</span></span> raspberry <span class="constant">pi</span>:
+<p> For users, who wants to remotely see the desktop of Raspberry pi, it’s necessary to set up the VNC.</p>
+<ul>
+<li><p>First we need to install the VNC server on raspberry pi:</p>
+<pre><code>   <span class="built_in">sudo</span> apt-get install tightvncserver
+</code></pre></li>
+<li><p>Next, start the VNC server on the Raspberry Pi. Adjust the geometry paramater to your desired display size.</p>
+<pre><code>   vncserver :<span class="number">1</span> <span class="attribute">-geometry</span> <span class="number">1024</span>x600 <span class="attribute">-depth</span> <span class="number">16</span> <span class="attribute">-pixelformat</span> rgb565
+</code></pre><p> You may be asked for setting up password.</p>
+</li>
+<li><p>Now, we can finally connect to the Pi with VNC. Back on the Ubuntu machine, install the VNC viewer client:</p>
+<pre><code>    <span class="built_in">sudo</span> apt-get install xtightvncviewer
+</code></pre></li>
+<li><p>Then connect to the running VNC server:</p>
+<p>   vncviewer 10.42.0.41:5901</p>
+<p>Here 5901 is the default port for the VNC server running on your pi.</p>
+</li>
+<li><p>To stop the VNC viewer, just close the application. To stop the VNC server, issue the following command (on the Raspberry Pi):</p>
+<p>   vncserver -kill :1 </p>
+</li>
+</ul>
+<h2 id="Reference:">Reference:</h2>
+<ol>
+<li><a href="http://codenachos.com/view/raspberry-pi-connect-using-ssh-and-ethernet-cable-in-ubuntu" target="_blank">http://codenachos.com/view/raspberry-pi-connect-using-ssh-and-ethernet-cable-in-ubuntu</a> </li>
+<li><a href="http://mitchtech.net/vnc-setup-on-raspberry-pi-from-ubuntu/" target="_blank">http://mitchtech.net/vnc-setup-on-raspberry-pi-from-ubuntu/</a></li>
+</ol>
 
-        sudo apt-<span class="keyword">get</span> install tightvncserver
-
-* Next, start <span class="keyword">the</span> VNC server <span class="function_start"><span class="keyword">on</span></span> <span class="keyword">the</span> Raspberry Pi. Adjust <span class="keyword">the</span> geometry paramater <span class="keyword">to</span> your desired display size.
-
-        vncserver :<span class="number">1</span> -geometry <span class="number">1024</span>x600 -depth <span class="number">16</span> -pixelformat rgb565
-
-  You may be asked <span class="keyword">for</span> setting up password.
-
-* Now, we can finally connect <span class="keyword">to</span> <span class="keyword">the</span> Pi <span class="keyword">with</span> VNC. Back <span class="function_start"><span class="keyword">on</span></span> <span class="keyword">the</span> Ubuntu machine, install <span class="keyword">the</span> VNC viewer client:
-
-         sudo apt-<span class="keyword">get</span> install xtightvncviewer
-
-* Then connect <span class="keyword">to</span> <span class="keyword">the</span> <span class="property">running</span> VNC server:
-
-    vncviewer <span class="number">10.42</span><span class="number">.0</span><span class="number">.41</span>:<span class="number">5901</span>
-
-  Here <span class="number">5901</span> <span class="keyword">is</span> <span class="keyword">the</span> default port <span class="keyword">for</span> <span class="keyword">the</span> VNC server <span class="property">running</span> <span class="function_start"><span class="keyword">on</span></span> your <span class="constant">pi</span>.
-
-* To stop <span class="keyword">the</span> VNC viewer, just close <span class="keyword">the</span> <span class="type">application</span>. To stop <span class="keyword">the</span> VNC server, issue <span class="keyword">the</span> following command (<span class="function_start"><span class="keyword">on</span></span> <span class="keyword">the</span> Raspberry Pi):
-
-    vncserver -kill :<span class="number">1</span> 
-</code></pre><h2 id="Reference:">Reference:</h2>
-<pre><code>  <span class="number">1.</span> <span class="keyword">http</span>://codenachos.com/view/raspberry-<span class="constant">pi</span>-connect-<span class="keyword">using</span>-ssh-<span class="operator">and</span>-ethernet-cable-<span class="operator">in</span>-ubuntu 
-  <span class="number">2.</span> <span class="keyword">http</span>://mitchtech.net/vnc-setup-<span class="command"><span class="keyword">on</span>-raspberry-pi-from-ubuntu/</span>
-</code></pre>
       
     </div>
     <footer>
