@@ -54,6 +54,47 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-07-23T05:51:57.000Z"><a href="/2014/07/22/raspberry/">Jul 22 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/07/22/raspberry/">raspberry</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>For Ubuntu users, here are some tips to connect with your<br>   pi with a standard ethenet cable.</p>
+<h2 id="SSH_into_your_pi">SSH into your pi</h2>
+<p>   Added by Pablo Farias</p>
+<p>   connect the raspberry pi to the computer using an ethernet cable<br>   in ubuntu, go to Settings - Network - Wired - IPv4 -&gt; scroll dropbown to “Share with other”, this will give internet to the Raspberr pi</p>
+<pre><code>   ifconfig <span class="operator">-a</span>
+</code></pre><p>   find address in eth0. E.g. 10.42.0.1</p>
+<pre><code>   nmap 10.42.0/24
+</code></pre><p>   use the port you find to connect to the raspberry pi</p>
+<pre><code>   ssh pi<span class="variable">@10</span>.<span class="number">42.0</span>.<span class="number">41</span>
+</code></pre>
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-07-21T04:55:12.000Z"><a href="/2014/07/20/scala/">Jul 20 2014</a></time>
       
       
