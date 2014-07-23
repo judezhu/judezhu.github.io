@@ -84,18 +84,18 @@
 <p>  sudo apt-get install tightvncserver</p>
 </li>
 <li><p>Next, start the VNC server on the Raspberry Pi. Adjust the geometry paramater to your desired display size.</p>
-<p>  vncserver :1 -geometry 1024x600 -depth 16 -pixelformat rgb565</p>
-<p>  You may be asked for setting up password.</p>
+<p>   vncserver :1 -geometry 1024x600 -depth 16 -pixelformat rgb565</p>
+<p>You may be asked for setting up password.</p>
 </li>
 <li><p>Now, we can finally connect to the Pi with VNC. Back on the Ubuntu machine, install the VNC viewer client:</p>
-<p>  sudo apt-get install xtightvncviewer</p>
+<p>   sudo apt-get install xtightvncviewer</p>
 </li>
 <li><p>Then connect to the running VNC server:</p>
-<p>  vncviewer 10.42.0.41:5901</p>
-<p>  Here 5901 is the default port for the VNC server running on your pi.</p>
+<p>   vncviewer 10.42.0.41:5901</p>
+<p>Here 5901 is the default port for the VNC server running on your pi.</p>
 </li>
 <li><p>To stop the VNC viewer, just close the application. To stop the VNC server, issue the following command (on the Raspberry Pi):</p>
-<p>  vncserver -kill :1 </p>
+<p>   vncserver -kill :1 </p>
 </li>
 </ul>
 <h2 id="Reference:">Reference:</h2>
