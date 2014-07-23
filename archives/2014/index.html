@@ -78,25 +78,25 @@
 </code></pre></li>
 </ul>
 <h2 id="VNC_to_your_pi">VNC to your pi</h2>
-<p> For users, who wants to remotely see the desktop of Raspberry pi, it’s necessary to set up the VNC.</p>
+<p>For users, who wants to remotely see the desktop of Raspberry pi, it’s necessary to set up the VNC.</p>
 <ul>
 <li><p>First we need to install the VNC server on raspberry pi:</p>
-<pre><code>   <span class="built_in">sudo</span> apt-get install tightvncserver
-</code></pre></li>
+<p>  sudo apt-get install tightvncserver</p>
+</li>
 <li><p>Next, start the VNC server on the Raspberry Pi. Adjust the geometry paramater to your desired display size.</p>
-<pre><code>   vncserver :<span class="number">1</span> <span class="attribute">-geometry</span> <span class="number">1024</span>x600 <span class="attribute">-depth</span> <span class="number">16</span> <span class="attribute">-pixelformat</span> rgb565
-</code></pre><p> You may be asked for setting up password.</p>
+<p>  vncserver :1 -geometry 1024x600 -depth 16 -pixelformat rgb565</p>
+<p>  You may be asked for setting up password.</p>
 </li>
 <li><p>Now, we can finally connect to the Pi with VNC. Back on the Ubuntu machine, install the VNC viewer client:</p>
-<pre><code>    <span class="built_in">sudo</span> apt-get install xtightvncviewer
-</code></pre></li>
+<p>  sudo apt-get install xtightvncviewer</p>
+</li>
 <li><p>Then connect to the running VNC server:</p>
-<pre><code>       <span class="tag">vncviewer</span> 10<span class="class">.42</span><span class="class">.0</span><span class="class">.41</span><span class="pseudo">:5901</span>
-</code></pre><p>Here 5901 is the default port for the VNC server running on your pi.</p>
+<p>  vncviewer 10.42.0.41:5901</p>
+<p>  Here 5901 is the default port for the VNC server running on your pi.</p>
 </li>
 <li><p>To stop the VNC viewer, just close the application. To stop the VNC server, issue the following command (on the Raspberry Pi):</p>
-<pre><code>       <span class="tag">vncserver</span> <span class="tag">-kill</span> <span class="pseudo">:1</span> 
-</code></pre></li>
+<p>  vncserver -kill :1 </p>
+</li>
 </ul>
 <h2 id="Reference:">Reference:</h2>
 <ol>
