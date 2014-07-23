@@ -67,15 +67,15 @@
         <p>For Ubuntu users, here are some tips to connect with your<br>   pi with a standard ethenet cable.</p>
 <h2 id="SSH_into_your_pi">SSH into your pi</h2>
 <ul>
-<li><p>connect the raspberry pi to the computer using an ethernet cable<br>in ubuntu, go to <code>Settings</code> - <code>Network</code> - <code>Wired</code> - <code>IPv4</code> -&gt; scroll dropbown to <code>Share with other</code>, this will give internet to the Raspberr pi</p>
-<p>  ifconfig -a</p>
-</li>
+<li><p>connect the raspberry pi to the computer using an ethernet cable in ubuntu, go to <code>Settings</code> - <code>Network</code> - <code>Wired</code> - <code>IPv4</code> -&gt; scroll dropbown to <code>Share with other</code>, this will give internet to the Raspberr pi</p>
+<pre><code>  ifconfig <span class="operator">-a</span>
+</code></pre></li>
 <li><p>find address in eth0. E.g. 10.42.0.1</p>
-<p>  nmap 10.42.0/24</p>
-</li>
+<pre><code>  nmap 10.42.0/24
+</code></pre></li>
 <li><p>use the port you find to connect to the raspberry pi</p>
-<p>  ssh pi@10.42.0.41</p>
-</li>
+<pre><code>  ssh pi<span class="variable">@10</span>.<span class="number">42.0</span>.<span class="number">41</span>
+</code></pre></li>
 </ul>
 
       
