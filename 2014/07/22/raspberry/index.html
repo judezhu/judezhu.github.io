@@ -86,17 +86,14 @@
 <pre><code>    <span class="built_in">sudo</span> apt-get install xtightvncviewer
 </code></pre></li>
 <li><p>Then connect to the running VNC server:</p>
+<pre><code>       <span class="tag">vncviewer</span> 10<span class="class">.42</span><span class="class">.0</span><span class="class">.41</span><span class="pseudo">:5901</span>
+</code></pre><p>Here 5901 is the default port for the VNC server running on your pi.</p>
 </li>
+<li><p>To stop the VNC viewer, just close the application. To stop the VNC server, issue the following command (on the Raspberry Pi):</p>
+<pre><code>       <span class="tag">vncserver</span> <span class="tag">-kill</span> <span class="pseudo">:1</span> 
+</code></pre></li>
 </ul>
-<pre><code>            vncviewer <span class="number">10.42</span><span class="number">.0</span><span class="number">.41</span>:<span class="number">5901</span>
-
-
- Here <span class="number">5901</span> <span class="keyword">is</span> <span class="keyword">the</span> default port <span class="keyword">for</span> <span class="keyword">the</span> VNC server <span class="property">running</span> <span class="function_start"><span class="keyword">on</span></span> your <span class="constant">pi</span>.
-</code></pre><ul>
-<li>To stop the VNC viewer, just close the application. To stop the VNC server, issue the following command (on the Raspberry Pi):</li>
-</ul>
-<pre><code>             <span class="tag">vncserver</span> <span class="tag">-kill</span> <span class="pseudo">:1</span> 
-</code></pre><h2 id="Reference:">Reference:</h2>
+<h2 id="Reference:">Reference:</h2>
 <ol>
 <li><a href="http://codenachos.com/view/raspberry-pi-connect-using-ssh-and-ethernet-cable-in-ubuntu" target="_blank">http://codenachos.com/view/raspberry-pi-connect-using-ssh-and-ethernet-cable-in-ubuntu</a> </li>
 <li><a href="http://mitchtech.net/vnc-setup-on-raspberry-pi-from-ubuntu/" target="_blank">http://mitchtech.net/vnc-setup-on-raspberry-pi-from-ubuntu/</a></li>
